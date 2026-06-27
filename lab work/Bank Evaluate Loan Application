@@ -1,0 +1,36 @@
+#Problem Statement
+# A bank evaluates loan applications using:
+# •
+# Credit Score ≥ 750
+# •
+# Annual Income ≥ ₹8,00,000
+# •
+# Existing Loan Amount ≤ ₹2,00,000
+# Conditions:
+# •
+# All conditions satisfied → Approved
+# •
+# Only one condition fails → Manual Review Input details
+credit_score = int(input("Enter Credit Score: "))
+annual_income = float(input("Enter Annual Income (₹): "))
+existing_loan = float(input("Enter Existing Loan Amount (₹): "))
+
+# Count failed conditions
+fail_count = 0
+
+if credit_score < 750:
+    fail_count += 1
+
+if annual_income < 800000:
+    fail_count += 1
+
+if existing_loan > 200000:
+    fail_count += 1
+
+# Decision
+if fail_count == 0:
+    print("Loan Status: Approved")
+elif fail_count == 1:
+    print("Loan Status: Manual Review")
+else:
+    print("Loan Status: Rejected")
