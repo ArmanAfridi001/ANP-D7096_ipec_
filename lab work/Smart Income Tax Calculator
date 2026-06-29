@@ -42,4 +42,3 @@ if gender == "female":
 print(f"Final Tax Payable: ₹{tax:.2f}")
 
 
-# my name is ayaaz
